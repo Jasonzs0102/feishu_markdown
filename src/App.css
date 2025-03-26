@@ -1,0 +1,237 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 16px;
+  color: #8f959e;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+}
+
+.error-container h3 {
+  color: #f53f3f;
+  margin-bottom: 12px;
+}
+
+.error-container p {
+  margin-bottom: 8px;
+  color: #1f2329;
+}
+
+.error-container ul {
+  text-align: left;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.retry-button, .refresh-button {
+  padding: 8px 16px;
+  background-color: #3370ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover, .refresh-button:hover {
+  background-color: #2860e1;
+}
+
+.refresh-button {
+  margin-top: 12px;
+}
+
+.field-selector {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: #f7f8fa;
+}
+
+.field-selector h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2329;
+}
+
+.field-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.field-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.field-item:hover {
+  background-color: #f0f1f3;
+}
+
+.no-selection, .no-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 16px;
+  color: #8f959e;
+  background-color: #f7f8fa;
+  border-radius: 4px;
+}
+
+.tip {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #a9aeb8;
+}
+
+.preview-container {
+  flex: 1;
+  overflow: auto;
+}
+
+.markdown-previews {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.markdown-preview-item {
+  border: 1px solid #e5e6eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.markdown-preview-item h3 {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #f7f8fa;
+  border-bottom: 1px solid #e5e6eb;
+}
+
+.markdown-content {
+  padding: 16px;
+  overflow: auto;
+}
+
+/* 调试面板 */
+.debug-panel {
+  margin-top: 20px;
+  border-top: 1px solid #e5e6eb;
+  padding-top: 12px;
+}
+
+.debug-panel summary {
+  cursor: pointer;
+  color: #8f959e;
+  font-size: 14px;
+}
+
+.debug-info {
+  background-color: #f6f8fa;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  color: #666;
+  max-height: 200px;
+  overflow: auto;
+  margin-top: 8px;
+}
+
+/* Markdown样式 */
+.markdown-content h1 {
+  font-size: 24px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.markdown-content h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+
+.markdown-content h3 {
+  font-size: 18px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.markdown-content p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.markdown-content code {
+  background-color: #f6f8fa;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
+.markdown-content pre {
+  background-color: #f6f8fa;
+  padding: 16px;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #dfe1e6;
+  padding-left: 16px;
+  margin-left: 0;
+  color: #6b7785;
+}
+
+.markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-content table th,
+.markdown-content table td {
+  border: 1px solid #dfe1e6;
+  padding: 6px 12px;
+}
+
+.markdown-content table th {
+  background-color: #f7f8fa;
+} 

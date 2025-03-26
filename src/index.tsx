@@ -1,28 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { bitable, IAttachmentField } from '@lark-base-open/js-sdk';
-import { Alert, AlertProps } from 'antd';
+import './index.css'
+import App from './App'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <LoadApp/>
-  </React.StrictMode>
-)
+// 全局错误处理
+window.addEventListener('error', (event) => {
+  console.error('全局错误:', event.error)
+})
 
-function LoadApp() {
-  const [info, setInfo] = useState('get table name, please waiting ....');
-  const [alertType, setAlertType] = useState<AlertProps['type']>('info');
-  useEffect(() => {
-    const fn = async () => {
-      const table = await bitable.base.getActiveTable();
-      const tableName = await table.getName();
-      setInfo(`The table Name is ${tableName}`);
-      setAlertType('success');
-    };
-    fn();
-  }, []);
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('未处理的Promise拒绝:', event.reason)
+})
 
-  return <div>
-    <Alert message={info} type={alertType} />
-  </div>
+const root = document.getElementById('root')
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  )
+} else {
+  console.error('找不到root元素，请检查HTML结构')
 }
